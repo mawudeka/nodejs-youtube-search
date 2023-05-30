@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Abstract</title>
+		<script
+			src="https://kit.fontawesome.com/f1a39b0f14.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	</head>
+	<body>
+		<main>
+			<!-- Navbar Sesction -->
+			<nav>
+				<div id="navbar">
+					<div class="logo">
+						<h1>Logo</h1>
+						<a href="#">Help Center</a>
+					</div>
+
+					<div class="buttons">
+						<button id="hamburger" onclick="hamburgerMenu()">
+							<i class="fa-solid fa-bars fa-2xl btn__menu"></i>
+						</button>
+						<button class="btn btn__submit">Submit a request</button>
+						<button class="btn btn__sign-in">Sign in</button>
+					</div>
+				</div>
+				<div class="links">
+					<ul>
+						<li>Submit a request</li>
+						<hr />
+						<li>Sign in</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- End of navbar section -->
+
+			<!-- Hero section -->
+			<section id="hero">
+				<h3 class="hero__header">Search 12 Quick Videos</h3>
+				<form action="/" method="post">
+					<input
+						class="search"
+						type="text"
+						name="search"
+						placeholder="Search"
+					/>
+					<button class="btn btn__search" type="submit">Search</button>
+				</form>
+			</section>
+			<!-- End of Hero section -->
+
+			<!-- feature section -->
+			<section id="features">
+				<div class="grid-box">
+					<% videos.forEach((video)=>{%>
+					<div class="grid-item">
+						<iframe
+							width="100%"
+							height="70%"
+							src="https://www.youtube.com/embed/<%= video.id %>"
+							frameborder="0"
+						>
+						</iframe>
+						<h3 class="feature-header"><%= video.title %></h3>
+					</div>
+					<% }) %>
+				</div>
+			</section>
+			<!-- end of feature section -->
+			<!-- footer section -->
+			<section id="footer">
+				<div class="footer-content">
+					<div class="abstract">
+						<h4>Abstract</h4>
+						<ul>
+							<li>
+								<a href="#">Branches</a>
+							</li>
+						</ul>
+					</div>
+					<div class="resources">
+						<h4>Resources</h4>
+						<ul>
+							<li>
+								<a href="#">Blog</a>
+							</li>
+							<li>
+								<a href="#">Help Center</a>
+							</li>
+							<li>
+								<a href="#">Release Notes</a>
+							</li>
+							<li>
+								<a href="#">Status</a>
+							</li>
+						</ul>
+					</div>
+					<div class="community">
+						<h4>Community</h4>
+						<ul>
+							<li>
+								<a href="#">Twitter</a>
+							</li>
+							<li>
+								<a href="#">LinkedIn</a>
+							</li>
+							<li>
+								<a href="#">Facebook</a>
+							</li>
+							<li>
+								<a href="#">Dribble</a>
+							</li>
+							<li>
+								<a href="#">Podcast</a>
+							</li>
+						</ul>
+					</div>
+					<div class="company">
+						<h4>Company</h4>
+						<ul>
+							<li>
+								<a href="#">About</a>
+							</li>
+							<li>
+								<a href="#">Careers</a>
+							</li>
+							<li>
+								<a href="#">Legal</a>
+							</li>
+						</ul>
+						<h4>Contact Us</h4>
+						<ul>
+							<li>
+								<a href="#">info@abstract.com</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<!-- end of footer section -->
+		</main>
+
+		<script src="js/index.js"></script>
+	</body>
+</html>
