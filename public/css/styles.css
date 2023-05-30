@@ -236,7 +236,7 @@ a {
 
 	.grid-item {
 		max-width: 90%;
-		margin: 0 auto;
+		margin: 15px auto;
 		min-height: auto;
 		border-radius: 10px;
 		overflow: hidden;
